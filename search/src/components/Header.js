@@ -1,12 +1,12 @@
 import React from 'react';
 
-const Header = () => {
+export default  function Header(props){
     return (
         <>
-         <input type = "text"/>
-         <div>
-             <p>user input text</p>
-         </div>
+        
+         
+             <h1>Search  {props.lib} App</h1>
+       
         </>
     )
 }

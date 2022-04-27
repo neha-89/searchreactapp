@@ -1,10 +1,10 @@
 import React from 'react';
 
-const Header = () => {
+export default function Footer(props) {
     return (
         <>
         <center>  
-            <p>Developer</p>
+            <p>&copy; Developer Funnel {props.year} {props.month}</p>
         </center>
        
         </>
