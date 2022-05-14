@@ -8,7 +8,7 @@ const Home = () => {
         <>
         <Header/>
         <h1>Hii From React</h1>
-        <Footer />
+        <Footer year ="2022 "month = "April"/>
         </>
     )// as one function can return one value at a time so we need to wrap it under single html element.
         
