@@ -11,16 +11,24 @@ class Home extends Component {
        
        this.state = {
            productData : JSON,
+           filteredData : JSON
           
        }
    }
-   
+
+   filterProduct = (keyword) => {
+    let output = this.state.productData.filter((item) => {
+        return item.name.toLowerCase().indexOf(keyword.toLowerCase())>-1
+    })
+    this.setState({filteredData:output})
+}
    render(){
-       console.log(this.state.productData)
+       //console.log(this.state.productData)
     return (
         <>
-        <Header  />
-        <Product prodData = {this.state.productData} />
+        <Header usertext = {(data)=>{this.filterProduct(data)}}  />{/*receving the data*/}
+        <Product prodata = {this.state.filteredData} />
+        {/* <Product prodData = {this.state.productData} /> */}
         <Footer year ="2022 "month = "April"/>
         </>
     )// as one function can return one value at a time so we need to wrap it under single html element.

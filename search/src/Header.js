@@ -12,7 +12,7 @@ class Header extends React.Component {
         console.log(event.target.value)
         this.setState({keyword:event.target.value?event.target.value:'User Text Here'})
         // from here we are passing data
-       // this.props.userText(event.target.value)
+        this.props.userText(event.target.value)
 
     }
 
