@@ -5,6 +5,7 @@ import Home from './components/Home';
 import About from './components/About';
 import Contact from './components/Contact';
 import Post from './components/Post';
+import PostDetails from './components/postDetails';
 
 export default function App(){
     return(
@@ -17,10 +18,6 @@ export default function App(){
                     <li><Link to="/post">Post</Link></li>
                 </ul>
             </div>
-            {/* <Route path="/" component={<Home />}></Route>
-            <Route path="/about" component={<About />}></Route>
-            <Route path="/contact"component={<Contact />}></Route>
-            <Route path="/post"component={<Post/>}></Route> */}
                 
           
             <Routes>
@@ -28,6 +25,7 @@ export default function App(){
                 <Route exact path='/about'element={<About />}></Route>
                 <Route exact path='/contact'element={<Contact />}></Route>
                 <Route exact path='/post'element={<Post />}></Route>
+                <Route path='/post/:topic'element={<PostDetails />}></Route>
 
             </Routes>
         </Router>
